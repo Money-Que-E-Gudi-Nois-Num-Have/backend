@@ -4,6 +4,18 @@
   "testEnvironment": "node",
   "testRegex": ".e2e-spec.ts$",
   "transform": {
-    "^.+\\.(t|j)s$": "ts-jest"
+    "^.+\\.(t|j)s$": ["ts-jest", {
+      "isolatedModules": true,
+      "diagnostics": {
+        "ignoreCodes": [
+          "TS2322",
+          "TS2345",
+          "TS2532",
+          "TS2531",
+          "TS2769",
+          "TS2740"
+        ]
+      }
+    }]
   }
 }

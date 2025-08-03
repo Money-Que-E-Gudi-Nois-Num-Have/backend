@@ -8,11 +8,6 @@ export class Member {
     public readonly share: number,
     public readonly person: Person,
   ) {
-    if (isOwner) {
-      this.share = 0;
-      this.paid = null;
-    } else {
-      this.paid = false;
-    }
+    this.paid = isOwner ? null : false;
   }
 }
